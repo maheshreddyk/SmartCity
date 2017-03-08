@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+          OutageType
+      </th>
+      <th>Location</th>
+      <th>Status</th>
+      <th>Reported Date</th>
+      <th>Resolved Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="outage in outStatCtrl.outages">
+      <td>{{outage.outageType}}</td>
+      <td>{{outage.address}}</td>
+      <td>{{outage.status}}</td>
+      <td>{{outage.reportedDate | date:'MM/dd/yyyy'}}</td>
+      <td>{{outage.resolvedDate | date:'MM/dd/yyyy'}}</td>
+    </tr>
+  </tbody>
